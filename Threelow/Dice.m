@@ -8,19 +8,19 @@
 
 #import "Dice.h"
 
-@implementation Dice
+  @implementation Dice
 
--(instancetype)initWithValue:(int)diceValue;
-{
-  self = [super init];
-  if (self) {
-    _diceValue = diceValue;
+  -(instancetype)init {
+    self = [super init];
+    if (self) {
+      _hold = NO;
+      [self randomize];
+    }
+    return self;
   }
-  return self;
-}
 
--(void)randomize
-{
-  self.diceValue = arc4random_uniform(6) + 1;
-}
-@end
+  -(void)randomize
+  {
+    self.diceValue = arc4random_uniform(6) + 1;
+  }
+  @end

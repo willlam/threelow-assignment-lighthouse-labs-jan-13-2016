@@ -1,5 +1,5 @@
 //
-//  Dice.h
+//  DiceCollector.h
 //  Threelow
 //
 //  Created by William Lam on 2016-01-13.
@@ -8,11 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Dice : NSObject
+@interface DiceCollector : NSObject
 
-@property (nonatomic) int diceValue;
-@property (nonatomic) BOOL hold;
-
--(void)randomize;
+-(void) roll;
+-(void) holdDieAtIndex:(NSInteger)index;
 
 @end

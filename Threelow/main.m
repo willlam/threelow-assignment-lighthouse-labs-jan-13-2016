@@ -8,30 +8,30 @@
 
 #import <Foundation/Foundation.h>
 #import "Dice.h"
+#import "InputCollector.h"
+#import "DiceCollector.h"
 
   int main(int argc, const char * argv[]) {
+
     
-//    Dice *die1 = [[Dice alloc] init];
-//    [die1 randomize];
-//    NSLog(@"%d", die1.diceValue);
-//    Dice *die2 = [[Dice alloc] init];
-//    NSLog(@"%d", die2.diceValue);
-//    Dice *die3 = [[Dice alloc] init];
-//    NSLog(@"%d", die3.diceValue);
-//    Dice *die4 = [[Dice alloc] init];
-//    NSLog(@"%d", die4.diceValue);
-//    Dice *die5 = [[Dice alloc] init];
-//    NSLog(@"%d", die5.diceValue);
-//    
+    DiceCollector *diceCollector = [[DiceCollector alloc] init];
+    
     while (YES) {
       
-       NSString *menuString = @"\nWhat would you like to do next?\nroll";
-//    
-//      DiceCollector *inputCollector = [[DiceCollector alloc] init];
-//      
-//      NSString *userSelection = [inputCollector inputForPrompt:menuString];
+      NSString *menuString = @"\nWhat would you like to do next?\n Would you like to roll";
+    
+      InputCollector *inputCollector = [[InputCollector alloc] init];
       
-      return 0;
-  }
+      NSString *userSelection = [inputCollector inputForPrompt:menuString];
+      
+      if ([userSelection isEqual:@"roll"]) {
+        [diceCollector roll];
+        for (Dice *dice in diceCollector.dice /*the property inside diceCollector */ ) {
+          NSLog(@"You rolled %d", dice.diceValue);
+        }
+        
+      }
 
+  }
+    return 0;
 }

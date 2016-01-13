@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface DiceCollector : NSObject
+@property (nonatomic) NSMutableArray *dice;
 
 -(void) roll;
--(void) holdDieAtIndex:(NSInteger)index;
+-(void) reset;
+//-(void) holdDieAtIndex:(NSInteger)index;
 
 @end

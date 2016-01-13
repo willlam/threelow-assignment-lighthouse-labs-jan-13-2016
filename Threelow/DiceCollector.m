@@ -10,10 +10,10 @@
 #import "Dice.h"
 
 
-@interface DiceCollector()
-@property (nonatomic) NSMutableArray *dice;
+//@interface DiceCollector()
 
-@end
+
+//@end
 
 
 @implementation DiceCollector
@@ -50,9 +50,9 @@
   }
 }
 
--(void)holdDieAtIndex:(NSInteger)index {
-  if ([Dice *dice = 
-}
+//-(void)holdDieAtIndex:(NSInteger)index {
+//  if ([Dice *dice = 
+//}
 
 
 

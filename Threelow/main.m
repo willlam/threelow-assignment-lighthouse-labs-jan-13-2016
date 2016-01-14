@@ -33,9 +33,13 @@
         else if ([userSelection isEqual:@"score"]) {
           [diceCollector score];
         }
-//        else if ([userSelection isEqual:@"reset" ]) {
-//          [diceCollector reset];
-//        }
+        else if ([userSelection isEqual:@"reset" ]) {
+          [diceCollector reset];
+        }
+        else if ([userSelection isEqual:@"rolll"]) {
+          NSLog(@"YOU WIN THE GAME. HUZZAH!");
+          return 0;
+        }
 
   }
     return 0;

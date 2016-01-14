@@ -54,6 +54,15 @@
 //  if ([Dice *dice = 
 //}
 
+-(int)score {
+  int sumOfDiceValue = 0; //keeping sum outside of iteration so it doesn't disappear
+  for (Dice *dice in self.dice) {
+      sumOfDiceValue = sumOfDiceValue + dice.diceValue;
+    NSLog(@"%i", sumOfDiceValue);
+  }
+  return sumOfDiceValue;
+}
+
 
 
 @end

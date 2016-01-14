@@ -13,6 +13,7 @@
 
 -(void) roll;
 -(void) reset;
+-(int)score;
 //-(void) holdDieAtIndex:(NSInteger)index;
 
 @end

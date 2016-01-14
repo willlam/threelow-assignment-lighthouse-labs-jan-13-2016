@@ -18,7 +18,7 @@
     
     while (YES) {
       
-      NSString *menuString = @"\nWhat would you like to do next?\n Would you like to roll";
+      NSString *menuString = @"\nWhat would you like to do next?\nroll?\nreset\ncheck your score?";
     
       InputCollector *inputCollector = [[InputCollector alloc] init];
       
@@ -29,8 +29,13 @@
         for (Dice *dice in diceCollector.dice /*the property inside diceCollector */ ) {
           NSLog(@"You rolled %d", dice.diceValue);
         }
-        
       }
+        else if ([userSelection isEqual:@"score"]) {
+          [diceCollector score];
+        }
+//        else if ([userSelection isEqual:@"reset" ]) {
+//          [diceCollector reset];
+//        }
 
   }
     return 0;
